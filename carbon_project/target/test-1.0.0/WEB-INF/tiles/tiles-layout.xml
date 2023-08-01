@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<!-- tiles 적용 -->
+	<definition name="layouts-tiles"
+		template="/WEB-INF/tiles/tiles-layout.jsp">
+		<!-- <put-attribute name="loadFile" value="/WEB-INF/tiles/loadFile.jsp" 
+			/> -->
+		<put-attribute name="header"
+			value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="side"
+			value="/WEB-INF/tiles/sidebar.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+
+	<definition name="*" extends="layouts-tiles"> <!-- definition name은 controller에서 return 해주는 값을 매칭 시킴 -->
+		<put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
+	</definition>
+	<definition name="*/*" extends="layouts-tiles"> <!-- definition name은 controller에서 return 해주는 값을 매칭 시킴 -->
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/{1}/{2}.jsp" />
+	</definition>
+
+	<!-- tiles 미적용 -->
+	<definition name="no-tiles"
+		template="/WEB-INF/tiles/empty.jsp">
+		<put-attribute name="notemple" value="s" />
+	</definition>
+
+	<definition name="login" extends="no-tiles">
+		<put-attribute name="notemple"
+			value="/WEB-INF/jsp/login.jsp" />
+	</definition>
+
+</tiles-definitions>
