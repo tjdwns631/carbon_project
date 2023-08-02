@@ -14,6 +14,7 @@
 						<h3 class="mb-0">연간 배출량</h3>
 						<h3 class="mb-0">연간 배출량</h3>
 						<h3 class="mb-0">연간 배출량</h3>
+						<h3 class="mb-0">연간 배출량</h3>
 						<canvas id="areaChart" height=130px></canvas>
 					</div>
 				</div>
