@@ -44,19 +44,18 @@ public class MainController {
 		return "test_layout";
 	}
 	
-	
-	
-	@RequestMapping(value = "/test.do")
-	public String TilesTest(HttpSession session) {
-		
-		String name = (String) session.getAttribute("member_name");
-		
-		ModelAndView mav = new ModelAndView();
-		
-		mav.addObject("member_name", name);
-		
-		return "test";
-	}
+	/*
+	 * @RequestMapping(value = "/test.do") public String TilesTest(HttpSession
+	 * session) {
+	 * 
+	 * String name = (String) session.getAttribute("member_name");
+	 * 
+	 * ModelAndView mav = new ModelAndView();
+	 * 
+	 * mav.addObject("member_name", name);
+	 * 
+	 * return "test"; }
+	 */
 
 	@RequestMapping("/main.do")
 	public ModelAndView main() {

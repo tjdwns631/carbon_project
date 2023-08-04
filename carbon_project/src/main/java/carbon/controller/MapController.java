@@ -3,14 +3,13 @@ package carbon.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
-@RequestMapping("/admin")
+@RequestMapping("/map")
 @Controller
-public class AdminController { //admin 관련 페이지
-
-	@RequestMapping("/admin_data.do")
+public class MapController {
+	
+	@RequestMapping("/map_test.do")
 	public String admin_data() {
-		return "admin/admin_data";
+		return "map/map_test";
 	}
 	
 }

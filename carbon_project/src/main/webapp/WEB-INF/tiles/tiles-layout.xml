@@ -16,20 +16,22 @@
 	<definition name="*/*" extends="layouts-tiles">
 		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
 	</definition>
-	<definition name="*/*/*" extends="layouts-tiles">
+<!-- 	<definition name="*/*/*" extends="layouts-tiles">
 		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}/{3}.jsp" />
-	</definition>
-
+	</definition> -->
+	
 	<!-- tiles 미적용 -->
 	<definition name="no-tiles" template="/WEB-INF/tiles/empty.jsp">
 		<put-attribute name="notemple" value="" />
 	</definition>
-
 	<definition name="login" extends="no-tiles">
 		<put-attribute name="notemple" value="/WEB-INF/jsp/login.jsp" />
 	</definition>
 	<definition name="test_layout" extends="no-tiles">
 		<put-attribute name="notemple" value="/WEB-INF/jsp/test_layout.jsp" />
+	</definition>
+ 	<definition name="map/map_test" extends="no-tiles"> <!-- definition name은 controller에서 return 해주는 값을 매칭 -->
+		<put-attribute name="notemple" value="/WEB-INF/jsp/map/map_test.jsp" />
 	</definition>
 	<definition name="error" extends="no-tiles">
 		<put-attribute name="notemple" value="${pageContext.request.contextPath}/common/error.jsp" />

@@ -12,7 +12,6 @@
 				<div class="card">
 					<div class="card-body">
 						<h3 class="mb-0">연간 배출량</h3>
-						<h3 class="mb-0">깃허브 테스트 파일</h3>
 						<canvas id="areaChart" height=130px></canvas>
 					</div>
 				</div>
