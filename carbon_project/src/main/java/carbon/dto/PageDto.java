@@ -13,5 +13,4 @@ public class PageDto {
 	/*전체 게시물 수*/
 	Integer total;
 	
-	
 }
