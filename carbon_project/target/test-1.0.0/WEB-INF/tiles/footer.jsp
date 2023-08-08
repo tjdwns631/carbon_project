@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +6,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<h1 style="margin-top:100px">푸터 입니다!!!!!</h1>
-
+		<div class="d-sm-flex justify-content-center justify-content-sm-between">
+			<span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © KP.dashboard.com 2023</span> 
+			<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> 
+			<a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">김포시 탄소중립도시 대시보드</a> from KP.dashboard.com
+			</span>
+		</div>
 </body>
 </html>

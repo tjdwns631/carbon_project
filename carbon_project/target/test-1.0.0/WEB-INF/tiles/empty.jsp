@@ -8,6 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div id="notemple"><tiles:insertAttribute name="notemple"/></div>
+	<div id="notemple"><tiles:insertAttribute name="notemple"  ignore="true" /></div>
 </body>
 </html>

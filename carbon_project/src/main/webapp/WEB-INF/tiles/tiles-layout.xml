@@ -10,20 +10,25 @@
 		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
 	</definition>
 
+	<!-- tiles 미적용 -->
+	<definition name="no-tiles" template="/WEB-INF/tiles/empty.jsp">
+		<put-attribute name="notemple" value="" />
+	</definition>
+	
+	<!-- tiles 미적용 원하는 폴더 먼저 앞쪽에 배치 -->
+	<!-- <definition name="board/*" extends="no-tiles"> definition name은 controller에서 return 해주는 값을 매칭
+		<put-attribute name="notemple" value="/WEB-INF/jsp/board/{1}.jsp" />
+	</definition> -->
+		
+	<!-- tiles 적용 -->
 	<definition name="*" extends="layouts-tiles"> <!-- definition name은 controller에서 return 해주는 값을 매칭 시킴 주소창 경로 확인 -->
 		<put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
 	</definition>
 	<definition name="*/*" extends="layouts-tiles">
 		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
 	</definition>
-<!-- 	<definition name="*/*/*" extends="layouts-tiles">
-		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}/{3}.jsp" />
-	</definition> -->
-	
+
 	<!-- tiles 미적용 -->
-	<definition name="no-tiles" template="/WEB-INF/tiles/empty.jsp">
-		<put-attribute name="notemple" value="" />
-	</definition>
 	<definition name="login" extends="no-tiles">
 		<put-attribute name="notemple" value="/WEB-INF/jsp/login.jsp" />
 	</definition>

@@ -7,4 +7,8 @@
 		<!-- <typeAlias alias="searchVO" type="egovframework.example.sample.service.SampleDefaultVO"/>
 		<typeAlias alias="sampleVO" type="egovframework.example.sample.service.SampleVO"/> -->
     </typeAliases>
+    
+<!--     <settings>
+		<setting name="returnsInstanceForEmptyRow" value = "true"  />
+	</settings> -->
 </configuration>
