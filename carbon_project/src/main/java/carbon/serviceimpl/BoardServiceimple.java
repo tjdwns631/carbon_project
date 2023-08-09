@@ -15,12 +15,26 @@ public class BoardServiceimple implements BoardService {
 	@Autowired
 	private BoardMapper boardmapper;
 
+
+	@Override
+	public void board_insert(BoardDto boardDto) throws Exception {
+		
+		boardmapper.board_insert(boardDto);
+	}
+
+
 	@Override
 	public List<BoardDto> board_list() {
 		
 		return boardmapper.board_list();
-		
 	}
-	
-	
+
+
+	@Override
+	public List<BoardDto> board_list22() {
+		// TODO Auto-generated method stub
+		return boardmapper.board_list22();
+	}
+
+
 }

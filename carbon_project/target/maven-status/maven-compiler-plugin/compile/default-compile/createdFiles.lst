@@ -1,4 +1,7 @@
+carbon\dto\PageDto.class
+carbon\service\BoardService.class
 carbon\serviceimpl\MemberServiceimple.class
+carbon\serviceimpl\BoardServiceimple.class
 carbon\dto\Tb_categoryDto.class
 carbon\cmmn\web\EgovBindingInitializer.class
 carbon\dto\BoardDto.class
@@ -6,6 +9,7 @@ carbon\service\MemberService.class
 carbon\mapper\MemberMapper.class
 carbon\cmmn\SecurityCofig.class
 carbon\controller\AdminController.class
+carbon\mapper\BoardMapper.class
 carbon\cmmn\web\EgovImgPaginationRenderer.class
 carbon\controller\MapController.class
 carbon\dto\MemberDto.class

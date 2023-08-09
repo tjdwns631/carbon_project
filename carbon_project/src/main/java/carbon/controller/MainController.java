@@ -70,7 +70,7 @@ public class MainController {
 		return mav;
 	}
 
-	@RequestMapping("/dash_dertail")
+	@RequestMapping("/dash_dertail.do")
 	public String detail() {
 		return "dash_detail";
 	}
