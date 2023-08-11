@@ -1,6 +1,8 @@
 package carbon.dto;
 
 
+import java.sql.Timestamp;
+
 import lombok.Data;
 
 @Data
@@ -13,9 +15,9 @@ public class BoardDto {
 	String board_pwd; // 글 비밀번호(삭제시)
 	Integer member_idx; // 작성자
 	Integer board_hits; // 조회수
-	String board_date; // 등록날일자
-	String board_upd; // 수정일자
-	
+	Timestamp board_date; // 등록날일자
+	Timestamp board_upd; // 수정일자
+	 
 	Tb_categoryDto tb_categorydto;
 	MemberDto memberdto;
 	
