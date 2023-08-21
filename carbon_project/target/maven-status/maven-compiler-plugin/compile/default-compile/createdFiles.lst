@@ -3,6 +3,7 @@ carbon\service\BoardService.class
 carbon\serviceimpl\MemberServiceimple.class
 carbon\serviceimpl\BoardServiceimple.class
 carbon\dto\Tb_categoryDto.class
+carbon\dto\CommentDto.class
 carbon\cmmn\web\EgovBindingInitializer.class
 carbon\dto\BoardDto.class
 carbon\service\MemberService.class
@@ -15,6 +16,7 @@ carbon\controller\MapController.class
 carbon\dto\MemberDto.class
 carbon\controller\MemberController.class
 carbon\cmmn\EgovSampleOthersExcepHndlr.class
+carbon\dto\Search.class
 carbon\controller\BoardController.class
 carbon\cmmn\EgovSampleExcepHndlr.class
 carbon\controller\MainController.class

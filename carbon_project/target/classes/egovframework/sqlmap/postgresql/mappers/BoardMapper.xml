@@ -24,6 +24,7 @@
 		<result column="BOARD_HITS" property="board_hits" />
 		<result column="BOARD_DATE" property="board_date" />
 		<result column="BOARD_UPD" property="board_upd" />
+		<result column="COUNT" property="count" />
 		<collection property="memberdto" resultMap="MemberDto" />
 		<collection property="tb_categorydto" resultMap="Tb_categoryDto" />
 	</resultMap>
@@ -31,7 +32,8 @@
 	<!-- 게시물 리스트 -->
 	<select id="board_list"  resultMap="BoardDto">
 		SELECT a.board_idx board_idx, a.board_title board_title, a.cate_idx cate_idx, b.cate_name cate_name, a.member_idx member_idx,
-		 c.member_name member_name, a.board_hits board_hits, a.board_date board_date
+		 c.member_name member_name, a.board_hits board_hits, a.board_date board_date,
+		 (select count(*) from tb_board_comment where board_idx = a.board_idx) as count
 		FROM tb_board a JOIN tb_category b ON a.cate_idx = b.cate_idx
 		JOIN tb_member c ON c.member_idx = a.member_idx
 		
@@ -80,5 +82,11 @@
 	<insert id="board_hitsupd" parameterType="carbon.dto.BoardDto">
 		UPDATE tb_board SET board_hits = board_hits + 1 where board_idx = ${board_idx}
 	</insert>
-
+	
+		<!-- 댓글 조회 -->
+<!-- 	<select id="board_commentlist"  resultType="carbon.dto.CommentDto">
+		SELECT * FROM tb_board_comment 
+		WHERE board_idx = ${board_idx}
+	</select>
+ -->
 </mapper>

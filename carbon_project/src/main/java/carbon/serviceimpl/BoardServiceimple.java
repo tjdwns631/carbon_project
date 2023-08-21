@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import carbon.dto.BoardDto;
+import carbon.dto.CommentDto;
 import carbon.dto.PageDto;
 import carbon.dto.Search;
 import carbon.mapper.BoardMapper;
@@ -34,24 +35,20 @@ public class BoardServiceimple implements BoardService {
 
 
 	@Override
-	public BoardDto board_getlist(Integer board_idx) {
-		
-		System.out.println("board_idxserviceimple"+board_idx);
-		
+	public BoardDto board_getlist(Integer board_idx) throws Exception {
 		return boardmapper.board_getlist(board_idx);
 	}
 
 
 	@Override
-	public void board_hitsupd(Integer board_idx) {
+	public void board_hitsupd(Integer board_idx) throws Exception {
 		boardmapper.board_hitsupd(board_idx);
 	}
 
 
 	@Override
-	public int board_listcnt(Search search) {
+	public int board_listcnt(Search search) throws Exception {
 		return boardmapper.board_listcnt(search);
 	}
-
 
 }

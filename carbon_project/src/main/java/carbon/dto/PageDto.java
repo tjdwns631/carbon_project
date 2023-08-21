@@ -38,7 +38,7 @@ public class PageDto {
 
 		//전체 페이지수 
 
-		this.pageCnt = (int) Math.ceil(listcnt/listSize);
+		this.pageCnt = (int) Math.ceil((double)listcnt/listSize);
 
 		//시작 페이지
 
@@ -58,7 +58,7 @@ public class PageDto {
 
 		//다음 버튼 상태
 
-		this.next = endPage > pageCnt ? false : true;
+		this.next = pageCnt > endPage ? true : false;
 
 		if (this.endPage > this.pageCnt) {
 
