@@ -11,7 +11,7 @@
 			<div class="col-lg-6 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
-						<h3 class="mb-0">연간 배출량</h3>
+						<h3 class="mb-0" style="padding-bottom: 20px;">연간 총 배출량</h3>
 						<canvas id="areaChart" height=130px></canvas>
 					</div>
 				</div>
@@ -20,13 +20,14 @@
 			<div class="col-lg-6 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
+						<h3 class="mb-0" style="padding-bottom: 50px;"></h3>
 						<canvas id="barChart" height=130px></canvas>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-7 grid-margin stretch-card">
+			<div class="col-lg-4 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
 						<h4 class="card-title">
@@ -40,18 +41,79 @@
 								<option value="2020">2020년</option>
 							</select>
 						</h4>
-						<canvas id="d_bar_chart" height=90px></canvas>
+						<canvas id="d_bar_chart" height=160px></canvas>
 					</div>
 				</div>
 			</div>
 
-			<div class="col-lg-5 grid-margin stretch-card">
+			<div class="col-lg-4 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
-						<canvas id="pie"></canvas>
+						<canvas id="pie" height=160px></canvas>
 					</div>
 				</div>
 			</div>
+			
+			<!-- 배출량 -->
+	            <div class="num-data-box col-lg-4 d-flex align-items-between flex-wrap justify-content-between row">
+              <div class="col-lg-6 grid-margin stretch-card ml10">
+                <div class="card" style="background-color:#11c4d4">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0 num-large">1,996,276</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 style="margin-top: 15px; color:#111;">총 배출량</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 grid-margin stretch-card pr-0">
+                <div class="card" style="background-color:#113bd4">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0 num-large">1,575,198</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 style="margin-top: 15px;">순 배출량</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 grid-margin stretch-card ml10">
+                <div class="card" style="background-color:#4f11d4">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0 num-large">10,031,192</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 style="margin-top: 15px;">직접 배출량</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 grid-margin stretch-card pr-0">
+                <div class="card" style="background-color:#11d4b7">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0 num-large">965,084</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 style="margin-top: 15px; color: #111;">간접 배출량</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+			<!-- 배출량 -->
 		</div>
 
 		<div class="row">

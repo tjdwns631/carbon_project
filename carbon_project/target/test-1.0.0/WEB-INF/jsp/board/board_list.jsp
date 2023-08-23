@@ -45,7 +45,11 @@
 												${list.tb_categorydto.cate_name}</a>
 												</td>
 												<td style="width: 30%;"><a style="text-decoration: none; color: #6c7293;" href="${pageContext.request.contextPath}/board/board_getlist.do?board_idx=${list.board_idx}">
-												${list.board_title}</a>
+												${list.board_title}
+												<c:if test="${list.count ne 0 }">
+												[${list.count}] 
+												</c:if>
+												</a>
 												</td>
 												<td style="width: 15%;"><a style="text-decoration: none; color: #6c7293;" href="${pageContext.request.contextPath}/board/board_getlistAjax.do?board_idx=${list.board_idx}">
 												${list.memberdto.member_name}</a>

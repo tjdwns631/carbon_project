@@ -43,6 +43,10 @@ public class MainController {
 	public String test_layout() {
 		return "test_layout";
 	}
+	@RequestMapping("/test_dash.do")
+	public String test_dasg() {
+		return "test_dash";
+	}
 	
 	/*
 	 * @RequestMapping(value = "/test.do") public String TilesTest(HttpSession

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/owl-carousel-2/owl.theme.default.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/add.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/jys.css">
 	<!-- JS -->     
 	<script src="${pageContext.request.contextPath}/js/jquery-3.7.0.min.js"></script> 
     <script src="${pageContext.request.contextPath}/js/dashboard_chart.js"></script>

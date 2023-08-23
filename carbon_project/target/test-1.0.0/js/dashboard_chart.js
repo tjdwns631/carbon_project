@@ -23,6 +23,10 @@ function dashboard_linechart(area_id) { // 대시보드 첫번째 차트
 			}],
 		},
 		options: {
+			legend: {
+            	display: true,
+            	position:'bottom'
+        	},
 			plugins: {
 				datalabels: {
 					color: '#D5D5D5',
@@ -90,6 +94,10 @@ function dashboard_barchart(area_id) { // 대시보드 2번째 차트
 			}],
 		},
 		options: {
+			legend: {
+				display: true,
+				position: 'bottom'
+			},
 			plugins: {
 				datalabels: {
 					color: '#D5D5D5',
@@ -135,28 +143,33 @@ function dashboard_d_barchart(area_id) { // 대시보드 3번째 차트
 
 	var ctx = document.getElementById(area_id);
 	var myChart = new Chart(ctx, {
-		type: 'bar',
+		type: 'horizontalBar',
 		data: {
 			labels: ["에너지", "AFOLU", "전력", "페기물"],
-			datasets: [{
+			datasets: [
+			/*{
 				label: '사용량',
 				data: [419121, 16606, 27505, 2741112, 20699],
 				backgroundColor: 'rgba(255, 99, 132, 0.2)',
 				borderColor: 'rgba(255,99,132,1)',
-				borderWidth: 1,
+				borderWidth: 1.2,
 				fill: false,
 				barPercentage: 0.5,
-			}, {
+			},*/ 
+			{
 				label: '배출량',
 				data: [837254, 33212, 55010, 548225, 59200],
-				backgroundColor: 'rgba(54, 162, 235, 0.2)',
-				borderColor: 'rgba(54, 162, 235, 1)',
-				borderWidth: 1,
+				backgroundColor: ['rgba(54, 162, 235, 0.2)','rgba(255, 99, 132, 0.2)','rgba(54, 162, 235, 0.2)','rgba(255, 99, 132, 0.2)'],
+				borderColor: ['rgba(54, 162, 235, 1)','rgba(255,99,132,1)','rgba(54, 162, 235, 1)','rgba(255,99,132,1)'],
+				borderWidth: 1.2,
 				fill: false,
 				barPercentage: 0.5, // bar 굵기 조절
 			}],
 		},
 		options: {
+			legend: {
+				display: false,
+			},
 			plugins: {
 				datalabels: {
 					color: '#D5D5D5',
@@ -179,13 +192,17 @@ function dashboard_d_barchart(area_id) { // 대시보드 3번째 차트
 					},
 					ticks: {
 						min: 0,
-						maxTicksLimit: 4,
+						maxTicksLimit: 3,
 					},
 
 				}],
 				xAxes: [{
 					gridLines: {
 						color: "rgba(204, 204, 204,0.1)"
+					},
+						ticks: {
+						min: 0,
+						maxTicksLimit: 4,
 					},
 				}]
 			}
