@@ -22,7 +22,7 @@
     <script src="https://kit.fontawesome.com/8d87159f62.js" crossorigin="anonymous"></script>
  
 </head>
-<body>
+<body class="sidebar-icon-only">
 <div id="wrap">
 	<div class="container-scroller">
       <!-- partial:partials/_sidebar.html -->
@@ -59,5 +59,7 @@
 <script src="${pageContext.request.contextPath}/js/boot/settings.js"></script>
 <script src="${pageContext.request.contextPath}/js/boot/todolist.js"></script>
 <script src="${pageContext.request.contextPath}/js/boot/dashboard.js"></script>
+<script src="${pageContext.request.contextPath}/js/chartjs-plugin-doughnutlabel.js"></script>
+
 </body>
 </html>

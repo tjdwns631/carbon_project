@@ -11,8 +11,8 @@ function dashboard_linechart(area_id) { // 대시보드 첫번째 차트
 			datasets: [{
 				label: '총배출량',
 				data: [1028080, 1802883, 5642567, 4526465, 4342225, 1111129],
-				backgroundColor: 'rgba(255, 99, 132, 0.2)',
-				borderColor: 'rgba(255,99,132,1)',
+				backgroundColor: '#11c4d450',
+				borderColor: '#11c4d4',
 				borderWidth: 1,
 				fill: true, // 3: no fill
 				tension: 0,
@@ -78,16 +78,16 @@ function dashboard_barchart(area_id) { // 대시보드 2번째 차트
 			datasets: [{
 				label: '직접배출',
 				data: [917254, 972529, 951253, 1064555, 1032352, 1032323],
-				backgroundColor: 'rgba(255, 99, 132, 0.2)',
-				borderColor: 'rgba(255,99,132,1)',
+				backgroundColor: '#4f11d450',
+				borderColor: '#4f11d4',
 				borderWidth: 1,
 				fill: false,
 				barPercentage: 0.5,
 			}, {
 				label: '간접배출',
 				data: [601254, 712529, 751253, 864555, 902352, 962323],
-				backgroundColor: 'rgba(54, 162, 235, 0.2)',
-				borderColor: 'rgba(54, 162, 235, 1)',
+				backgroundColor: '#11d4b750',
+				borderColor: '#11d4b7',
 				borderWidth: 1,
 				fill: false,
 				barPercentage: 0.5, // bar 굵기 조절
@@ -159,8 +159,8 @@ function dashboard_d_barchart(area_id) { // 대시보드 3번째 차트
 			{
 				label: '배출량',
 				data: [837254, 33212, 55010, 548225, 59200],
-				backgroundColor: ['rgba(54, 162, 235, 0.2)','rgba(255, 99, 132, 0.2)','rgba(54, 162, 235, 0.2)','rgba(255, 99, 132, 0.2)'],
-				borderColor: ['rgba(54, 162, 235, 1)','rgba(255,99,132,1)','rgba(54, 162, 235, 1)','rgba(255,99,132,1)'],
+				backgroundColor: ['#113bd450','#f6c74e50','#113bd450','#f6c74e50'],
+				borderColor: ['#113bd4','#f6c74e','#113bd4','#f6c74e'],
 				borderWidth: 1.2,
 				fill: false,
 				barPercentage: 0.5, // bar 굵기 조절
@@ -217,18 +217,34 @@ function dashboard_pie_chart(area_id) { // 대시보드 파이 차트
 
 	var ctx = document.getElementById(area_id);
 	var myChart = new Chart(ctx, {
-		type: 'pie',
+		type: 'doughnut',
 		data: {
 			labels: ["직접배출량", "간접배출량"],
 			datasets: [{
 				data: [61, 39], //58,42
-				backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
-				borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)'],
+				backgroundColor: ['#4f11d450', '#11d4b750'],
+				borderColor: ['#4f11d4', '#11d4b7'],
 			}],
 		},
 		options: {
+			cutoutPercentage: 85,
+			legend: {
+				//display: false,
+			},
 			plugins: {
+				doughnutlabel: {
+					labels: [
+						{
+							text: 'The title4433434',
+							font: {
+								size: '60'
+							},
+							color: 'red'
+						},
+					]
+				},
 				datalabels: {
+					//display: false,
 					color: '#D5D5D5',
 					display: function(context) {
 						return context.dataset.data[context.dataIndex] > 15;
@@ -240,8 +256,17 @@ function dashboard_pie_chart(area_id) { // 대시보드 파이 차트
 						let result = value + "%";
 						return result
 					},
-				}
+				},
+		
 			},
+/*			elements: {
+				center: {
+					text: '12313123131',
+					color: 'white',
+					fontStyle: 'Helvetica', //Default Arial 
+					//sidePadding: 15 //Default 20 (as a percentage) 
+				}
+			},*/
 		},
 	});
 }

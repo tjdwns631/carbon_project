@@ -6,6 +6,7 @@ function despose_barchart(area_id) { // 현황조회 바 차트
 	var ctx = document.getElementById(area_id);
 	var myChart = new Chart(ctx, {
 		type: 'bar',
+		//type: 'horizontalBar',
 		data: {
 			labels: ["도로", "상업", "공공", "가정","장내발효","CH4","N2O","석회시용","벼재배"],
 			datasets: [{
@@ -49,6 +50,10 @@ function despose_barchart(area_id) { // 현황조회 바 차트
 					gridLines: {
 						color: "rgba(204, 204, 204,0.1)"
 					},
+					/*ticks: {
+						min: 0,
+						maxTicksLimit: 5,
+					},*/
 				}]
 			}
 		},
@@ -56,6 +61,43 @@ function despose_barchart(area_id) { // 현황조회 바 차트
 }
 
 function despose_pie(area_id) { // 현황조회 파이 차트
+
+	Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+	Chart.defaults.global.defaultFontColor = '#858796';
+
+	var ctx = document.getElementById(area_id);
+	var myChart = new Chart(ctx, {
+		type: 'pie',
+		data: {
+			labels: ["에너지", "AFOLU"],
+			datasets: [{
+				data: [61, 39], //58,42
+				backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+				borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)'],
+			}],
+		},
+		options: {
+			responsive:false,
+			plugins: {
+				datalabels: {
+					color: '#D5D5D5',
+					display: function(context) {
+						return context.dataset.data[context.dataIndex] > 15;
+					},
+					font: {
+						weight: 'bold'
+					},
+					formatter: function(value, context) {
+						let result = value + "%";
+						return result
+					},
+				}
+			},
+		},
+	});
+}
+
+function despose_pie2(area_id) { // 현황조회 파이 차트
 
 	Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 	Chart.defaults.global.defaultFontColor = '#858796';

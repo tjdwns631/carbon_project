@@ -6,102 +6,116 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<div style="margin-bottom: 20px;">
-			<select class="pl" name="year">
-				<option value="">연도선택</option>
-				<option value="2015" selected>2015년</option>
-				<option value="2016">2016년</option>
-				<option value="2017">2017년</option>
-				<option value="2018">2018년</option>
-				<option value="2019">2019년</option>
-				<option value="2020">2020년</option>
-			</select> 
-			<select class="pl" name="lev1">
-				<option value="">배출방법</option>
-				<option value="1" selected>직접배출</option>
-				<option value="2">간접배출</option>
-			</select>
-		</div>
+	<div style="margin-bottom: 20px;">
+		<select class="pl" name="year">
+			<option value="">연도선택</option>
+			<option value="2015" selected>2015년</option>
+			<option value="2016">2016년</option>
+			<option value="2017">2017년</option>
+			<option value="2018">2018년</option>
+			<option value="2019">2019년</option>
+			<option value="2020">2020년</option>
+		</select> <select class="pl" name="lev1">
+			<option value="">배출방법</option>
+			<option value="1" selected>직접배출</option>
+			<option value="2">간접배출</option>
+		</select>
+	</div>
 
-		<div class="row">
-			<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-				<div class="card">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-9">
-								<div class="d-flex align-items-center align-self-start">
-									<h2 class="mb-0">1,996,276</h2>
-								</div>
+	<div class="row">
+		<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-9">
+							<div class="d-flex align-items-center align-self-start">
+								<h2 class="mb-0">1,996,276</h2>
 							</div>
 						</div>
-						<h6 class="text-muted font-weight-normal" style="margin-top: 7px;">총 배출량</h6>
 					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-				<div class="card">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-9">
-								<div class="d-flex align-items-center align-self-start">
-									<h2 class="mb-0">1,575,198</h2>
-								</div>
-							</div>
-						</div>
-						<h6 class="text-muted font-weight-normal" style="margin-top: 7px;">총 사용량</h6>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-				<div class="card">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-9">
-								<div class="d-flex align-items-center align-self-start">
-									<h3 class="mb-0">10,031,192</h3>
-								</div>
-							</div>
-						</div>
-						<h6 class="text-muted font-weight-normal" style="margin-top: 7px;">직접 배출량</h6>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-				<div class="card">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-9">
-								<div class="d-flex align-items-center align-self-start">
-									<h3 class="mb-0">965,084</h3>
-								</div>
-							</div>
-						</div>
-						<h6 class="text-muted font-weight-normal" style="margin-top: 7px;">간접 배출량</h6>
-					</div>
+					<h6 class="text-muted font-weight-normal" style="margin-top: 7px;">총
+						배출량</h6>
 				</div>
 			</div>
 		</div>
-
-		<div class="row">
-			<div class="col-lg-7 grid-margin stretch-card">
-				<div class="card">
-					<div class="card-body">
-						<h4 class="card-title" style="font-weight: 900;">2015년 배출량</h4>
-						<canvas id="despose_barchart" height=90px></canvas>
+		<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-9">
+							<div class="d-flex align-items-center align-self-start">
+								<h2 class="mb-0">1,575,198</h2>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-5 grid-margin stretch-card">
-				<div class="card">
-					<div class="card-body">
-						<canvas id="despose_pie"></canvas>
-					</div>
+					<h6 class="text-muted font-weight-normal" style="margin-top: 7px;">총
+						사용량</h6>
 				</div>
 			</div>
 		</div>
-		
-		<div class="row">
+		<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-9">
+							<div class="d-flex align-items-center align-self-start">
+								<h3 class="mb-0">10,031,192</h3>
+							</div>
+						</div>
+					</div>
+					<h6 class="text-muted font-weight-normal" style="margin-top: 7px;">직접
+						배출량</h6>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-9">
+							<div class="d-flex align-items-center align-self-start">
+								<h3 class="mb-0">965,084</h3>
+							</div>
+						</div>
+					</div>
+					<h6 class="text-muted font-weight-normal" style="margin-top: 7px;">간접
+						배출량</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<h4 class="card-title" style="font-weight: 900;">2015년 배출량</h4>
+					<canvas id="despose_barchart" height="120px"></canvas>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-3 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+				<h4 class="card-title" style="font-weight: 900;">2015년 배출량</h4>
+					<canvas id="despose_pie" style=" margin-left: 40px;" height="300px"></canvas>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-3 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+				<h4 class="card-title" style="font-weight: 900;">2015년 배출량</h4>
+					<canvas id="despose_pie2"  style=" margin-left: 40px;" height="300px"></canvas>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
 			<div class="col-lg-5 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
@@ -178,6 +192,8 @@
 
 		$("#despose_pie").empty(); // 초기화 후 재생성
 		despose_pie('despose_pie');
+		$("#despose_pie2").empty(); // 초기화 후 재생성
+		despose_pie('despose_pie2');
 
 		$("#despose_table_chart").empty(); // 초기화 후 재생성
 		despose_table_chart('despose_table_chart');
