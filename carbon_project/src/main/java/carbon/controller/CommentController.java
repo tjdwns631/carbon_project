@@ -29,8 +29,8 @@ public class CommentController {
 	CommentService commentservice;
 	
 	@ResponseBody
-	@RequestMapping("/CommentAction.do") // 글쓰기 액션 public String
-	public String write_action(@RequestParam("member_idx") Integer member_idx,@RequestParam("board_idx") Integer board_idx,
+	@RequestMapping("/CommentAction.do") //댓글 작성
+	public int write_action(@RequestParam("member_idx") Integer member_idx,@RequestParam("board_idx") Integer board_idx,
 			@RequestParam("cmt_content") String cmt_content,@RequestParam("cmt_upidx") Integer cmt_upidx, CommentDto commentdto ) throws Exception { // 현재 날짜/시간
 		
 		
@@ -53,12 +53,16 @@ public class CommentController {
 		commentdto.setCmt_upidx(cmt_upidx);
 		commentdto.setCmt_date(datetime);
 		int result = commentservice.commemt_insert(commentdto);
+		System.out.println(commentdto.getCmt_idx());
+		System.out.println(commentdto.getCmt_idx());
 		System.out.println(result);
-		String resul = "";
-		if(result == 1 ) {
-			resul = "성공";
+		System.out.println(result);
+		
+		if(result != 0 ) {
+			return result;
+		}else{
+			return 0;
 		}
-	  return resul;
 	  
 	  }
 	
@@ -79,3 +83,4 @@ public class CommentController {
 
 	}
 }
+
