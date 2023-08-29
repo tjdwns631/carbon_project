@@ -84,15 +84,20 @@ function comment_write(){
 	console.log($("#cmt_content").val());
 	
 	$.post('/CommentAction.do', {
-		'member_idx': $("#member_idx").val(),
-		'board_idx': $("#board_idx").val(),
-		'cmt_upidx': $("#cmt_upidx").val(),
-		'cmt_content': $("#cmt_content").val(),
+		'member_idx': $("#member_idx").val(),'board_idx': $("#board_idx").val(),
+		'cmt_upidx': $("#cmt_upidx").val(),	'cmt_content': $("#cmt_content").val(),
 	}, function (json) {
+		console.log(json)
+		if(json.result == 0){
+			alert("등록 실패");
+		}else{
+			$("#comment_info").empty();
+			getCommentList();
+			$("#cmt_content").val(""); //텍스트 박스 초기화
+			
+		}
 		
-		$("#comment_info").empty();
-		getCommentList();
-		$("#cmt_content").empty();
+		
 		
 	}, "json"); 
 }
@@ -125,6 +130,7 @@ function getCommentList(){
 			  
 		      var c_style = '';
 		      var replyimg= '';
+		      
 		      if(json.c_list[i].level > 1){
 		    	  replyimg = '<i class="far fa-hand-point-right" style="margin-right:10px;"></i>';
 		    	  if(json.c_list[i].level == 2){ c_style = 'margin-left:3%;'}
@@ -132,10 +138,20 @@ function getCommentList(){
 			      else if(json.c_list[i].level == 4){ c_style = 'margin-left:9%;'}
 			      else if(json.c_list[i].level == 5){ c_style = 'margin-left:12%;'}  
 		      }
-		    	 
-	    	  $("#comment_info").append("<li class ='cmt_"+json.c_list[i].cmt_idx+"' style='margin-bottom:10px;"+ c_style+"'>" +
+		    	
+		      let com_html = '';
+	
+		      com_html += "<li class='cmt_"+ json.c_list[i].cmt_idx+"' style='margin-bottom:10px;"+c_style+"'>";
+		      com_html += "<div>" +replyimg;
+		      com_html += "<span style='font-weight:bold; color:#777777; margin-right:10px;'>"+json.c_list[i].memberdto.member_name+"</span";
+		      com_html += "<span style='color:#777777;'>" + date.getFullYear() +"-"+now_month+"-"+now_day+" "+date.getHours()+":"+date.getMinutes() +"</span>";
+		      com_html += "</div>";
+			  com_html += "<div>" +json.c_list[i].cmt_content+ "</div>"
+			  com_html += "</li>";
+			  $("#comment_info").append(com_html)
+	    	 /*  $("#comment_info").append("<li class ='cmt_"+json.c_list[i].cmt_idx+"' style='margin-bottom:10px;"+ c_style+"'>" +
 					  "<div>"+replyimg+"<span style='font-weight:bold; color:#777777; margin-right:10px;'>" + json.c_list[i].memberdto.member_name +"</span><span style='color:#777777;'>" + date.getFullYear() +"-"+now_month+"-"+now_day+" "+date.getHours()+":"+date.getMinutes() +"</span></div>" +
-					  "<div>"+json.c_list[i].cmt_content+"</div>" +"</li>")
+					  "<div>"+json.c_list[i].cmt_content+"</div>" +"</li>") */
 			 
 			  }
 		  }
@@ -220,4 +236,5 @@ function board_getlist(){
 </script>
 </body>
 </html>
+
 

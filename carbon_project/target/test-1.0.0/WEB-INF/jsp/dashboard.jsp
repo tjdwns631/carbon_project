@@ -12,7 +12,7 @@
 				<div class="card">
 					<div class="card-body">
 						<h3 class="mb-0" style="padding-bottom: 20px;">연간 총 배출량</h3>
-						<canvas id="areaChart" height=130px></canvas>
+						<canvas id="areaChart" height=110px></canvas>
 					</div>
 				</div>
 			</div>
@@ -20,8 +20,8 @@
 			<div class="col-lg-6 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
-						<h3 class="mb-0" style="padding-bottom: 50px;"></h3>
-						<canvas id="barChart" height=130px></canvas>
+						<h3 class="mb-0" style="padding-bottom: 20px;">연간 직/간접 배출량</h3>
+						<canvas id="barChart" height=110px></canvas>
 					</div>
 				</div>
 			</div>
@@ -39,9 +39,13 @@
 								<option value="2018">2018년</option>
 								<option value="2019">2019년</option>
 								<option value="2020">2020년</option>
+								<option value="2021">2021년</option>
+								<option value="2022">2022년</option>
+								<option value="2023" selected>2023년</option>
+								
 							</select>
 						</h4>
-						<canvas id="d_bar_chart" height=160px></canvas>
+						<canvas id="d_bar_chart" height=150px></canvas>
 					</div>
 				</div>
 			</div>
@@ -49,7 +53,7 @@
 			<div class="col-lg-4 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
-						<canvas id="pie" height=160px></canvas>
+						<canvas id="pie" height=150px></canvas>
 					</div>
 				</div>
 			</div>
@@ -66,7 +70,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 style="margin-top: 15px; color:#111;">총 배출량</h6>
+                    <h6 style="margin-top: 15px; color:#111; font-weight: bold;">총 배출량</h6>
                   </div>
                 </div>
               </div>
@@ -80,7 +84,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 style="margin-top: 15px;">순 배출량</h6>
+                    <h6 style="margin-top: 15px; font-weight: bold;">순 배출량</h6>
                   </div>
                 </div>
               </div>
@@ -94,7 +98,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 style="margin-top: 15px;">직접 배출량</h6>
+                    <h6 style="margin-top: 15px; font-weight: bold;">직접 배출량</h6>
                   </div>
                 </div>
               </div>
@@ -108,7 +112,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 style="margin-top: 15px; color: #111;">간접 배출량</h6>
+                    <h6 style="margin-top: 15px; color: #111; font-weight: bold;">간접 배출량</h6>
                   </div>
                 </div>
               </div>
